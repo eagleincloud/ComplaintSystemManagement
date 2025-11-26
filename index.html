@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaint Management System - Enterprise Platform</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+  <meta name="description" content="Enterprise-grade complaint management with multi-role dashboards, analytics, escalation, and knowledge base.">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <header class="app-header">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-icon">📋</span>
+          <span class="logo-text">Complaint Manager</span>
+        </div>
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">🌙</button>
+          <button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu">☰</button>
+          <button class="btn btn--outline btn--sm" id="logoutBtn" style="display:none">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="app-body">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main-content" id="mainContent">
+        <div class="loading">Loading...</div>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  
+  <div class="modal" id="modal" style="display:none">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
